@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SRL Logistics & Holdings — Website
 
 A modern, user-friendly business website showcasing four core service areas:
@@ -67,3 +68,7 @@ The contact form currently shows a success message on submit. To receive real su
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [React Router](https://reactrouter.com)
 - [Lucide Icons](https://lucide.dev)
+=======
+# srllogisticsandholdingswebsite
+Official SRL Logistics and Holdings Website
+>>>>>>> 1c48eda6f8270261a7fddae199ada0496cebf50c
