@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import HeroBanner from '../components/HeroBanner'
 import SectionImage from '../components/SectionImage'
+import HostedSolutionCard from '../components/HostedSolutionCard'
 import ContactForm from '../components/ContactForm'
+import { hostedSolutions } from '../data/services'
 import { overlayDefaults } from '../data/images'
 
 export default function ServicePage({ service }) {
@@ -68,6 +70,27 @@ export default function ServicePage({ service }) {
           </div>
         </div>
       </section>
+
+      {service.showHostedSolutions && (
+        <section className="py-16 lg:py-24 bg-slate-50/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4">
+                Hosted Business Systems
+              </h2>
+              <p className="text-slate-600 text-lg">
+                We host, manage, and support a growing range of business platforms. Select a
+                solution below to learn more or request hosting for your organization.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {hostedSolutions.map((solution) => (
+                <HostedSolutionCard key={solution.id} solution={solution} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

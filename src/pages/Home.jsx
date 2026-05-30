@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <HeroBanner image={backgrounds.pages.home} overlay={overlayDefaults.light} minHeight="min-h-[480px] lg:min-h-[600px]">
         <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white/10 rounded-full border border-white/20 backdrop-blur-sm">
-          Logistics · Cloud · Email · Software
+          Logistics · Cloud · Email · Software · Hosted Systems
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-3xl">
           One Partner for Your{' '}
