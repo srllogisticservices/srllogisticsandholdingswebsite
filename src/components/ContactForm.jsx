@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Send, CheckCircle } from 'lucide-react'
+import { hostedSolutions } from '../data/services'
 
 const serviceOptions = [
   'Logistics & Transportation',
   'Server Hosting & Cloud Solutions',
   'Email Hosting & Domain Management',
   'Software & Database Development',
+  ...hostedSolutions.map((solution) => solution.title),
   'Multiple Services',
   'General Inquiry',
 ]

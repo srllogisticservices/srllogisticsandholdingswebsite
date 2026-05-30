@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Truck, Mail, Phone, MapPin } from 'lucide-react'
-import { services } from '../data/services'
+import { services, hostedSolutions } from '../data/services'
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-600 text-white">
@@ -30,6 +30,19 @@ export default function Footer() {
                 <li key={s.id}>
                   <Link to={s.slug} className="hover:text-white transition-colors">
                     {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-white mb-4">Hosted Systems</h3>
+            <ul className="space-y-2.5 text-sm">
+              {hostedSolutions.map((solution) => (
+                <li key={solution.id}>
+                  <Link to={solution.slug} className="hover:text-white transition-colors">
+                    {solution.title}
                   </Link>
                 </li>
               ))}
