@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7c2"/>
+      <stop offset="25%" stop-color="#ffd65a"/>
+      <stop offset="55%" stop-color="#c78a05"/>
+      <stop offset="80%" stop-color="#f3bd2c"/>
+      <stop offset="100%" stop-color="#fff0a6"/>
+    </linearGradient>
+    <linearGradient id="panelGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe881"/>
+      <stop offset="45%" stop-color="#d99b12"/>
+      <stop offset="100%" stop-color="#b87802"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="#000000"/>
+  <rect x="42" y="42" width="428" height="428" rx="62" fill="#050505" stroke="url(#gold)" stroke-width="16"/>
+  <rect x="61" y="61" width="390" height="390" rx="50" fill="#111111" stroke="#8b6408" stroke-width="3"/>
+  <rect x="86" y="86" width="340" height="340" rx="42" fill="url(#panelGold)" stroke="url(#gold)" stroke-width="5"/>
+  <g fill="url(#gold)" stroke="#7a4d00" stroke-width="1">
+    <circle cx="102" cy="76" r="5.3"/>
+    <circle cx="102" cy="436" r="5.3"/>
+    <circle cx="130" cy="76" r="5.3"/>
+    <circle cx="130" cy="436" r="5.3"/>
+    <circle cx="158" cy="76" r="5.3"/>
+    <circle cx="158" cy="436" r="5.3"/>
+    <circle cx="186" cy="76" r="5.3"/>
+    <circle cx="186" cy="436" r="5.3"/>
+    <circle cx="214" cy="76" r="5.3"/>
+    <circle cx="214" cy="436" r="5.3"/>
+    <circle cx="242" cy="76" r="5.3"/>
+    <circle cx="242" cy="436" r="5.3"/>
+    <circle cx="270" cy="76" r="5.3"/>
+    <circle cx="270" cy="436" r="5.3"/>
+    <circle cx="298" cy="76" r="5.3"/>
+    <circle cx="298" cy="436" r="5.3"/>
+    <circle cx="326" cy="76" r="5.3"/>
+    <circle cx="326" cy="436" r="5.3"/>
+    <circle cx="354" cy="76" r="5.3"/>
+    <circle cx="354" cy="436" r="5.3"/>
+    <circle cx="382" cy="76" r="5.3"/>
+    <circle cx="382" cy="436" r="5.3"/>
+    <circle cx="410" cy="76" r="5.3"/>
+    <circle cx="410" cy="436" r="5.3"/>
+    <circle cx="76" cy="104" r="5.3"/>
+    <circle cx="436" cy="104" r="5.3"/>
+    <circle cx="76" cy="132" r="5.3"/>
+    <circle cx="436" cy="132" r="5.3"/>
+    <circle cx="76" cy="160" r="5.3"/>
+    <circle cx="436" cy="160" r="5.3"/>
+    <circle cx="76" cy="188" r="5.3"/>
+    <circle cx="436" cy="188" r="5.3"/>
+    <circle cx="76" cy="216" r="5.3"/>
+    <circle cx="436" cy="216" r="5.3"/>
+    <circle cx="76" cy="244" r="5.3"/>
+    <circle cx="436" cy="244" r="5.3"/>
+    <circle cx="76" cy="272" r="5.3"/>
+    <circle cx="436" cy="272" r="5.3"/>
+    <circle cx="76" cy="300" r="5.3"/>
+    <circle cx="436" cy="300" r="5.3"/>
+    <circle cx="76" cy="328" r="5.3"/>
+    <circle cx="436" cy="328" r="5.3"/>
+    <circle cx="76" cy="356" r="5.3"/>
+    <circle cx="436" cy="356" r="5.3"/>
+    <circle cx="76" cy="384" r="5.3"/>
+    <circle cx="436" cy="384" r="5.3"/>
+  </g>
+  <text x="256" y="315" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="170" font-weight="bold"
+        fill="url(#gold)" stroke="#7b4b00" stroke-width="2.5"
+        filter="url(#shadow)">SRL</text>
+  <text x="256" y="315" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="170" font-weight="bold"
+        fill="none" stroke="#fff2a8" stroke-width="1.1" opacity="0.75">SRL</text>
+</svg>

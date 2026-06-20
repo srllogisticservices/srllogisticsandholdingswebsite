@@ -1,0 +1,29 @@
+{
+  "companyName": "SRL Logistics & Holdings",
+  "shortName": "SRL",
+  "tagline": "Logistics & Holdings",
+  "slogan": "Your Trusted Partner in Logistics, Technology, and Sustainable Growth.",
+  "logos": {
+    "default": "/images/logo.svg",
+    "light": "/images/logo-white.svg",
+    "icon": "/images/logo-icon.svg",
+    "small": "/images/logo-small.png"
+  },
+  "contact": {
+    "email": "info@srllogisticsandholdings.com",
+    "quoteEmail": "info@srllogisticsandholdings.com",
+    "phone": "+677 7885155",
+    "address": "Green Valley, East Honiara, Solomon Islands",
+    "hours": "Mon – Fri: 8:00 AM – 6:00 PM",
+    "facebook": "https://www.facebook.com/profile.php?id=61558125886870"
+  },
+  "consultation": {
+    "title": "Free Consultation Hours",
+    "subtitle": "Connect with SRL your way — Teams, WhatsApp, email, phone, or through our web portal. No obligation.",
+    "hoursNote": "Free consultations: Mon – Fri, 8:00 AM – 6:00 PM (Solomon Islands time)",
+    "teamsEmail": "info@srllogisticsandholdings.com",
+    "whatsapp": "6777885155",
+    "ctaTitle": "Not sure which service you need?",
+    "ctaText": "Book a free consultation — reach us on Teams, WhatsApp, email, phone, or browse our portal below."
+  }
+}

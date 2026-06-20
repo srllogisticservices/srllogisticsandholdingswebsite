@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <defs>
+    <linearGradient id="srlGradW" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="4" width="48" height="48" rx="12" fill="url(#srlGradW)"/>
+  <path d="M12 32h24v4H12v-4zm2-8h20l2 6H12l2-6zm4-6h12l3 6H15l3-6z" fill="#fff" opacity="0.95"/>
+  <circle cx="18" cy="38" r="3" fill="#fff"/>
+  <circle cx="34" cy="38" r="3" fill="#fff"/>
+  <text x="62" y="26" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">SRL</text>
+  <text x="62" y="44" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Logistics &amp; Holdings</text>
+</svg>

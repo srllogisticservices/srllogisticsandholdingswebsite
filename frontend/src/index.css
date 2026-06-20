@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  /* Gold, black & white — aligned with SRL compass logo */
+  --color-brand-50: #fdfbf5;
+  --color-brand-100: #f9f0d9;
+  --color-brand-200: #f0e0b8;
+  --color-brand-300: #e6cb82;
+  --color-brand-400: #d4af37;
+  --color-brand-500: #c9a227;
+  --color-brand-600: #996515;
+  --color-brand-700: #7a5012;
+  --color-brand-800: #5c3d0e;
+  --color-brand-900: #2a2210;
+  --color-brand-950: #1a1a1a;
+
+  --color-accent-400: #ffd700;
+  --color-accent-500: #e6c200;
+  --color-accent-600: #c9a227;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-slogan: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --breakpoint-xs: 30rem;
+}
+
+:root {
+  --header-height: 4.75rem;
+  --help-bar-height: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch-friendly tap targets on mobile */
+@media (max-width: 640px) {
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Smooth container padding on very small screens */
+@layer utilities {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .safe-area-pb {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .safe-area-pt {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+  .safe-area-inset-x {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+  .mobile-main-pad {
+    padding-bottom: calc(var(--help-bar-height) + env(safe-area-inset-bottom, 0px));
+  }
+  .sticky-below-header {
+    top: var(--header-height);
+  }
+  .hero-height {
+    @apply min-h-[320px] sm:min-h-[420px] lg:min-h-[520px] max-lg:landscape:min-h-[240px];
+  }
+  .hero-height-compact {
+    @apply min-h-[280px] sm:min-h-[340px] max-lg:landscape:min-h-[220px];
+  }
+  .hero-height-carousel {
+    @apply min-h-[320px] sm:min-h-[420px] lg:min-h-[460px] max-lg:landscape:min-h-[240px];
+  }
+  .font-slogan {
+    font-family: var(--font-slogan);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

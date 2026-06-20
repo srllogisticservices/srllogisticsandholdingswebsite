@@ -1,0 +1,8 @@
+{
+  "pages": {
+    "home": "/images/hero-home.jpg",
+    "about": "/images/about-team.jpg",
+    "contact": "/images/contact.jpg",
+    "whyChoose": "/images/why-choose.jpg"
+  }
+}

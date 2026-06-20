@@ -1,0 +1,8 @@
+[
+  { "src": "/images/gallery-warehouse.jpg", "alt": "Warehouse and inventory management facility", "title": "Warehouse Operations", "category": "Logistics" },
+  { "src": "/images/gallery-fleet.jpg", "alt": "Fleet of delivery trucks on the road", "title": "Fleet Management", "category": "Transportation" },
+  { "src": "/images/gallery-delivery.jpg", "alt": "Package delivery and last-mile logistics", "title": "Delivery Services", "category": "Logistics" },
+  { "src": "/images/gallery-server.jpg", "alt": "Server room and cloud infrastructure", "title": "Cloud Infrastructure", "category": "Hosting" },
+  { "src": "/images/gallery-office.jpg", "alt": "Modern office workspace", "title": "Business Solutions", "category": "Consulting" },
+  { "src": "/images/gallery-dev.jpg", "alt": "Software development team at work", "title": "Software Development", "category": "Development" }
+]

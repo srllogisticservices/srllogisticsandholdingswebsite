@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "About SRL Logistics & Holdings",
+    "subtitle": "We are a multi-service company dedicated to helping businesses operate smarter, move faster, and grow with confidence. From the warehouse floor to the cloud server, we have you covered."
+  },
+  "story": {
+    "title": "Our Story",
+    "paragraphs": [
+      "SRL Logistics & Holdings was founded with a simple vision: businesses shouldn't need a dozen vendors to handle their logistics, IT infrastructure, and software needs. We built a company that brings it all together.",
+      "What started as a transportation logistics company has grown into a full-service partner offering cloud hosting, email and domain management, and custom software development — all backed by the same commitment to reliability and client success.",
+      "Currently we serve clients across industries, helping them streamline operations, reduce costs, and focus on what they do best. Ministry of Environment, Climate Change, Disaster Management and Meteorological services are developing their Waste Management System Database Portal with us."
+    ],
+    "image": "/images/about-team.jpg",
+    "yearsExperience": "5+"
+  },
+  "values": [
+    { "icon": "Target", "title": "Results-Driven", "description": "We measure success by the outcomes we deliver for your business, not by hours billed." },
+    { "icon": "Users", "title": "Client-Focused", "description": "Every solution is tailored to your unique needs, workflows, and growth goals." },
+    { "icon": "Award", "title": "Excellence", "description": "We hold ourselves to the highest standards in logistics, infrastructure, and development." },
+    { "icon": "HeartHandshake", "title": "Partnership", "description": "We build long-term relationships, not one-off transactions." }
+  ],
+  "cta": {
+    "title": "Let's Work Together",
+    "text": "Whether you need to transport your goods, migrate to the cloud, or build custom software — we are here to help."
+  }
+}

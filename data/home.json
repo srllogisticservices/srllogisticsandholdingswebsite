@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "badge": "Logistics · Cloud · Email · Software · Networking · Starlink",
+    "title": "One Partner for Your",
+    "titleHighlight": "Business Growth",
+    "subtitle": "SRL Logistics & Holdings delivers end-to-end solutions — from moving your goods across the country to hosting your servers, managing your domains, and building the software your business runs on."
+  },
+  "heroSlides": [
+    { "src": "/images/hero-home.jpg", "alt": "Warehouse logistics", "caption": "Logistics" },
+    { "src": "/images/gallery-fleet.jpg", "alt": "Fleet services", "caption": "Transportation" },
+    { "src": "/images/gallery-server.jpg", "alt": "Cloud hosting", "caption": "Cloud hosting" },
+    { "src": "/images/gallery-dev.jpg", "alt": "Software development", "caption": "Software" }
+  ],
+  "stats": [
+    { "value": "5+", "label": "Clients Served" },
+    { "value": "99.9%", "label": "Uptime Guarantee" },
+    { "value": "24/7", "label": "Support Available" },
+    { "value": "5+", "label": "Years Experience" }
+  ],
+  "whyChoose": {
+    "title": "Why Choose SRL?",
+    "description": "We combine deep industry expertise with modern technology to deliver solutions that actually work for your business — not generic packages that miss the mark.",
+    "points": [
+      "Single point of contact for all your business needs",
+      "Transparent pricing with no hidden fees",
+      "Dedicated support team available around the clock",
+      "Proven track record across industries",
+      "Scalable solutions that grow with you"
+    ],
+    "image": "/images/why-choose.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "SRL transformed our transport logistics and have been supporting us for the past 5 years.",
+      "author": "Mr. Fiona Aisake",
+      "role": "Chief Operating Officer",
+      "company": "ANZ Solomon Islands"
+    },
+    {
+      "quote": "Their cloud hosting team migrated our entire infrastructure with zero downtime. Outstanding service.",
+      "author": "Derick Liosulia",
+      "role": "Deputy Principal",
+      "company": "Arnon Atomea PSS"
+    },
+    {
+      "quote": "The Waste Management Database Portal is a significant milestone for the Solomon Islands. By centralizing waste management data from across the country, the system provides a reliable foundation for planning, reporting, stakeholder collaboration, and future environmental investments. This achievement reflects a collective effort between government, stakeholders, and development partners working towards a cleaner and more sustainable Solomon Islands.",
+      "author": "Joe Kelesi",
+      "role": "ECD",
+      "company": "Solomon Islands Government"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "text": "Book a free consultation via Teams, WhatsApp, email, phone, or our web portal — no obligation."
+  }
+}
