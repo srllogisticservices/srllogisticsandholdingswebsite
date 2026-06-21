@@ -63,13 +63,13 @@ export default function Contact() {
       </HeroBanner>
 
       <section className="py-12 sm:py-16 bg-white/70 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <FreeConsultation id="consultation" variant="cards" />
         </div>
       </section>
 
       <section className="py-12 sm:py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-14">
             <div className="lg:col-span-2 space-y-5 sm:space-y-6">
               <div>

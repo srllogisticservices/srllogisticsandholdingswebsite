@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-brand-950 text-brand-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
+      <div className="container-page py-12 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10">
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-5">
@@ -116,7 +116,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 sm:mt-12 pt-8 border-t border-brand-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-brand-200/70">
+        <div className="mt-10 sm:mt-12 pt-8 border-t border-brand-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-brand-200/70 text-center sm:text-left">
           <div className="text-center sm:text-left space-y-1">
             <p>
               Copyright © {new Date().getFullYear()} - {branding.companyName}. All rights reserved.

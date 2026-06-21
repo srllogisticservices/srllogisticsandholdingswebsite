@@ -66,7 +66,7 @@ export default function Home() {
       <QuickExplore />
 
       <section className="bg-white/80 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="container-page w-full py-10 sm:py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center p-3 sm:p-0">
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       <section className="py-14 sm:py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Our Services</h2>
             <p className="text-slate-600 text-base sm:text-lg px-2">
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       <section className="py-14 sm:py-20 lg:py-28 bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-5 sm:mb-6">
@@ -164,7 +164,7 @@ export default function Home() {
       />
 
       <section className="py-14 sm:py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
               What Our Clients Say
@@ -173,11 +173,11 @@ export default function Home() {
               Trusted by businesses across logistics, finance, retail, and technology.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch">
             {testimonials.map((t) => (
               <blockquote
                 key={t.author}
-                className="bg-white/90 backdrop-blur-sm p-5 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col"
+                className="bg-white/90 backdrop-blur-sm p-5 sm:p-6 lg:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col h-full"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       <section className="py-14 sm:py-20 lg:py-28 bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <FreeConsultation variant="cards" />
         </div>
       </section>

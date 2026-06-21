@@ -21,6 +21,20 @@ $env:ADMIN_USERNAME = if ($env:ADMIN_USERNAME) { $env:ADMIN_USERNAME } else { "a
 $env:ADMIN_PASSWORD = if ($env:ADMIN_PASSWORD) { $env:ADMIN_PASSWORD } else { "SRLAdmin2026!" }
 $env:ADMIN_DISPLAY_NAME = if ($env:ADMIN_DISPLAY_NAME) { $env:ADMIN_DISPLAY_NAME } else { "System Administrator" }
 
+$envFile = Join-Path $root ".env"
+if (Test-Path $envFile) {
+    Get-Content $envFile | ForEach-Object {
+        $line = $_.Trim()
+        if ($line -and -not $line.StartsWith('#') -and $line.Contains('=')) {
+            $parts = $line.Split('=', 2)
+            $key = $parts[0].Trim()
+            $val = $parts[1].Trim().Trim('"').Trim("'")
+            if ($key) { Set-Item -Path "env:$key" -Value $val }
+        }
+    }
+    Write-Host "Loaded environment from .env"
+}
+
 Write-Host "Starting API on http://localhost:8000"
 Write-Host "Admin login: http://localhost:5173/admin/login (username: $env:ADMIN_USERNAME)"
 Set-Location backend

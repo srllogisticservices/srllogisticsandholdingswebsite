@@ -57,7 +57,7 @@ export default function HostedSolutionPage({ solution }) {
       </HeroBanner>
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16">
             <div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 mb-5 sm:mb-6">What We Offer</h2>

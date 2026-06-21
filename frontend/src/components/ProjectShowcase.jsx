@@ -26,7 +26,7 @@ export default function ProjectShowcase({
 
   return (
     <section className={`py-14 sm:py-20 lg:py-28 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-page w-full">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-12">
           <div className="max-w-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3">{title}</h2>

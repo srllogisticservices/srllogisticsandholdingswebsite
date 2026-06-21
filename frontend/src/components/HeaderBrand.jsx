@@ -31,27 +31,25 @@ export default function HeaderBrand({ onClick, showSlogan = true }) {
     <Link
       to="/"
       onClick={onClick}
-      className="flex items-center gap-2 sm:gap-2.5 min-w-0 max-w-[70%] xs:max-w-[55%] sm:max-w-[42%] lg:max-w-md xl:max-w-lg shrink-0 group"
+      className="flex items-center gap-2 sm:gap-3 min-w-0 max-w-[calc(100%-3rem)] lg:max-w-[min(100%,42rem)] shrink group"
     >
       <img
         src={smallLogo}
         alt={companyName}
-        className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 rounded-xl object-cover shadow-md ring-1 ring-brand-200/80 shrink-0 transition-opacity group-hover:opacity-90"
-        width={64}
-        height={64}
+        className="h-11 w-11 sm:h-12 sm:w-12 lg:h-14 lg:w-14 rounded-xl object-contain bg-white p-0.5 shadow-md ring-1 ring-brand-200/80 shrink-0 transition-opacity group-hover:opacity-90"
+        width={56}
+        height={56}
       />
 
       {showSlogan && (
         <>
           <span
-            className="hidden md:inline text-brand-400 font-light text-sm leading-none select-none shrink-0"
+            className="hidden lg:inline-block w-px h-8 bg-brand-300/70 shrink-0 self-center"
             aria-hidden="true"
-          >
-            |
-          </span>
+          />
           <SloganText
             text={slogan}
-            className="hidden md:block text-[0.625rem] lg:text-[0.65rem] xl:text-[0.7rem] text-slate-500 italic tracking-normal leading-tight min-w-0 max-w-[11rem] lg:max-w-[13rem] xl:max-w-[15rem]"
+            className="hidden lg:block text-[0.65rem] xl:text-xs text-slate-600 not-italic tracking-normal leading-snug min-w-0 flex-1"
           />
         </>
       )}

@@ -52,6 +52,29 @@ class AdminSession(Base):
     user = relationship("AdminUser")
 
 
+class PageVisit(Base):
+    __tablename__ = "page_visits"
+
+    id = Column(Integer, primary_key=True, index=True)
+    visitor_id = Column(String(64), nullable=False, index=True)
+    path = Column(String(500), nullable=False, index=True)
+    page_title = Column(String(300), nullable=True)
+    referrer = Column(String(500), nullable=True)
+    user_agent = Column(String(500), nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
+
+
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+
+    id = Column(Integer, primary_key=True, index=True)
+    session_id = Column(String(64), nullable=False, index=True)
+    visitor_id = Column(String(64), nullable=True, index=True)
+    role = Column(String(20), nullable=False)
+    message = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
+
+
 def init_db():
     Base.metadata.create_all(bind=engine)
 

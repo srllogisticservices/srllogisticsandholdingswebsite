@@ -27,11 +27,20 @@
 :root {
   --header-height: 4.75rem;
   --help-bar-height: 3.5rem;
+  --content-max: 80rem;
+  --content-px: 1rem;
 }
 
 @media (min-width: 640px) {
   :root {
     --header-height: 5rem;
+    --content-px: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --content-px: 2rem;
   }
 }
 
@@ -63,7 +72,24 @@ img, video {
 /* Smooth container padding on very small screens */
 @layer utilities {
   .container-page {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-pad {
+    @apply py-12 sm:py-16 lg:py-24;
+  }
+  .section-pad-sm {
+    @apply py-10 sm:py-14 lg:py-20;
+  }
+  .align-fab {
+    right: max(var(--content-px), calc((100vw - min(100vw, var(--content-max))) / 2 + var(--content-px)));
+  }
+  .align-fab-mobile {
+    bottom: calc(var(--help-bar-height) + 0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  @media (min-width: 1024px) {
+    .align-fab-mobile {
+      bottom: 1.5rem;
+    }
   }
   .scrollbar-hide {
     -ms-overflow-style: none;

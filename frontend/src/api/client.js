@@ -44,6 +44,16 @@ export const api = {
   submitContact: (data) =>
     request('/api/contact', { method: 'POST', body: JSON.stringify(data) }),
 
+  trackPageView: (data) =>
+    request('/api/analytics/pageview', { method: 'POST', body: JSON.stringify(data) }),
+
+  sendChatMessage: (data) =>
+    request('/api/chat', { method: 'POST', body: JSON.stringify(data) }),
+
+  getChatStatus: () => request('/api/chat/status'),
+
+  getChatWelcome: () => request('/api/chat/welcome'),
+
   adminLogin: (username, password) =>
     request('/api/admin/login', {
       method: 'POST',
@@ -59,6 +69,8 @@ export const api = {
       body: JSON.stringify({ data }),
     }),
   adminMessages: () => adminRequest('/api/admin/messages'),
+  adminAnalytics: (days = 30) => adminRequest(`/api/admin/analytics?days=${days}`),
+  adminChatLogs: () => adminRequest('/api/admin/chat/logs'),
 }
 
 export { getAdminToken }

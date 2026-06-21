@@ -226,11 +226,11 @@ export default function Navbar() {
 
   return (
     <header id="site-header" className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-200/60 shadow-sm safe-area-pt">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-[4.75rem] sm:min-h-[5rem] py-2">
+      <nav className="container-page">
+        <div className="flex items-center justify-between gap-3 min-h-[var(--header-height)] py-2">
           <HeaderBrand onClick={closeMobile} />
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center justify-end gap-1 shrink-0">
             {mainNav.map((item) =>
               item.type === 'link' ? (
                 <NavLink key={item.to} to={item.to} end={item.end} className={linkClass}>
@@ -250,7 +250,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
+            className="lg:hidden p-2.5 rounded-lg text-slate-600 hover:bg-slate-100 shrink-0 -mr-1"
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Close menu' : 'Open menu'}
           >

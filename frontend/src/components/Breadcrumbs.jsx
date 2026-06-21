@@ -6,7 +6,7 @@ export default function Breadcrumbs({ items = [] }) {
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-50/80 border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div className="container-page py-3">
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-slate-500">
           <li>
             <Link to="/" className="inline-flex items-center gap-1 hover:text-brand-600 transition-colors">

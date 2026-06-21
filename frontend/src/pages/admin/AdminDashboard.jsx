@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, FileJson } from 'lucide-react'
+import { ArrowRight, BarChart3, Eye, FileJson, Users } from 'lucide-react'
 import { api } from '../../api/client'
 
 export default function AdminDashboard() {
   const [files, setFiles] = useState([])
+  const [analytics, setAnalytics] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    api
-      .adminListContent()
-      .then((res) => setFiles(res.files || []))
+    Promise.all([api.adminListContent(), api.adminAnalytics()])
+      .then(([contentRes, analyticsRes]) => {
+        setFiles(contentRes.files || [])
+        setAnalytics(analyticsRes)
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false))
   }, [])
@@ -37,6 +40,44 @@ export default function AdminDashboard() {
           website data files and appear on the public site after refresh.
         </p>
       </div>
+
+      {analytics && (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div className="p-5 bg-white rounded-2xl border border-slate-200 flex items-center gap-4">
+            <div className="p-2.5 rounded-xl bg-brand-50 text-brand-700">
+              <Eye className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-slate-900">{analytics.totalPageViews}</p>
+              <p className="text-sm text-slate-600">Total page views</p>
+            </div>
+          </div>
+          <div className="p-5 bg-white rounded-2xl border border-slate-200 flex items-center gap-4">
+            <div className="p-2.5 rounded-xl bg-brand-50 text-brand-700">
+              <Users className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-slate-900">{analytics.uniqueVisitors}</p>
+              <p className="text-sm text-slate-600">Unique visitors</p>
+            </div>
+          </div>
+          <Link
+            to="/admin/analytics"
+            className="p-5 bg-brand-950 rounded-2xl border border-brand-800 flex items-center gap-4 text-white hover:bg-brand-900 transition-colors"
+          >
+            <div className="p-2.5 rounded-xl bg-brand-400/20 text-brand-400">
+              <BarChart3 className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{analytics.viewsToday} today</p>
+              <p className="text-sm text-brand-200">
+                {analytics.homeViewsToday ?? 0} home · {analytics.otherViewsToday ?? 0} other pages
+              </p>
+              <p className="text-xs text-brand-300 mt-1">View full analytics →</p>
+            </div>
+          </Link>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
         {files.map((file) => (

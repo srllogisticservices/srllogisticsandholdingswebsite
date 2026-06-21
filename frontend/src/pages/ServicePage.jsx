@@ -65,7 +65,7 @@ export default function ServicePage({ service }) {
       </HeroBanner>
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {service.cardImage && (
               <SectionImage
@@ -106,7 +106,7 @@ export default function ServicePage({ service }) {
 
       {service.showSubServices && (
         <section className="py-12 sm:py-16 lg:py-24 bg-slate-50/80">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container-page w-full">
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Software Development Services
@@ -127,7 +127,7 @@ export default function ServicePage({ service }) {
 
       {service.showHostedSolutions && (
         <section className="py-12 sm:py-16 lg:py-24 bg-slate-50/80">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container-page w-full">
             <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Hosted Business Systems
@@ -148,7 +148,7 @@ export default function ServicePage({ service }) {
 
       {related.length > 0 && (
         <section className="py-12 sm:py-16 bg-white/70 border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container-page w-full">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold text-slate-900">You may also need</h2>

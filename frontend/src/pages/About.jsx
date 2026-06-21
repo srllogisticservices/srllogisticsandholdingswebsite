@@ -31,7 +31,7 @@ export default function About() {
       </HeroBanner>
 
       <section className="py-12 sm:py-16 lg:py-24 bg-white/70 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-5 sm:mb-6">
@@ -53,7 +53,7 @@ export default function About() {
       </section>
 
       <section className="py-12 sm:py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 sm:mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {values.map(({ icon, title, description }) => {

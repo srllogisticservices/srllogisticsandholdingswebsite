@@ -21,7 +21,7 @@ export default function HeroBanner({
         aria-hidden="true"
       />
 
-      <div className={`relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 max-lg:landscape:py-8 flex flex-col ${alignClass}`}>
+      <div className={`relative w-full container-page py-12 sm:py-16 lg:py-24 max-lg:landscape:py-8 flex flex-col ${alignClass}`}>
         {children}
       </div>
     </section>

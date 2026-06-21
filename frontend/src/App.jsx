@@ -7,6 +7,7 @@ import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminContentEditor from './pages/admin/AdminContentEditor'
 import AdminServicesEditor from './pages/admin/AdminServicesEditor'
 import AdminMessages from './pages/admin/AdminMessages'
+import AdminAnalytics from './pages/admin/AdminAnalytics'
 
 function AdminContentRoute() {
   const { fileKey } = useParams()
@@ -25,6 +26,7 @@ export default function App() {
           <Route index element={<AdminDashboard />} />
           <Route path="content/:fileKey" element={<AdminContentRoute />} />
           <Route path="messages" element={<AdminMessages />} />
+          <Route path="analytics" element={<AdminAnalytics />} />
         </Route>
         <Route path="/*" element={<PublicApp />} />
       </Routes>

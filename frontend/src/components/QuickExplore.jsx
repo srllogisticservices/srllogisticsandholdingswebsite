@@ -15,7 +15,7 @@ const categories = [
 export default function QuickExplore() {
   return (
     <section className="bg-white/90 backdrop-blur-sm border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+      <div className="container-page py-8 sm:py-10">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5 sm:mb-6">
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">Explore Our Services</h2>

@@ -57,3 +57,83 @@ class ContactSubmissionResponse(BaseModel):
     service: str
     message: str
     createdAt: str
+
+
+class PageViewCreate(BaseModel):
+    visitorId: str = Field(min_length=8, max_length=64)
+    path: str = Field(min_length=1, max_length=500)
+    pageTitle: str | None = Field(default=None, max_length=300)
+    referrer: str | None = Field(default=None, max_length=500)
+
+
+class PageViewResponse(BaseModel):
+    ok: bool = True
+
+
+class ChatRequest(BaseModel):
+    message: str = Field(min_length=1, max_length=2000)
+    sessionId: str | None = Field(default=None, max_length=64)
+    visitorId: str | None = Field(default=None, max_length=64)
+
+
+class ChatResponse(BaseModel):
+    reply: str
+    sessionId: str
+    poweredBy: str = "fallback"
+
+
+class ChatStatusResponse(BaseModel):
+    aiEnabled: bool
+    provider: str | None = None
+    model: str | None = None
+
+
+class ChatWelcomeResponse(BaseModel):
+    welcomeMessage: str
+    suggestedQuestions: list[str]
+    aiEnabled: bool
+    provider: str | None = None
+    poweredBy: str = "fallback"
+
+
+class TopPageStat(BaseModel):
+    path: str
+    views: int
+
+
+class DailyVisitStat(BaseModel):
+    date: str
+    pageViews: int
+    uniqueVisitors: int
+    homeViews: int
+    otherViews: int
+
+
+class ServiceDemandStat(BaseModel):
+    service: str
+    pageViews: int
+    inquiries: int
+    totalInterest: int
+
+
+class AnalyticsSummaryResponse(BaseModel):
+    totalPageViews: int
+    uniqueVisitors: int
+    uniqueVisitorsToday: int
+    viewsToday: int
+    viewsThisWeek: int
+    homeViewsToday: int
+    otherViewsToday: int
+    chatMessages: int
+    topPages: list[TopPageStat]
+    dailyHistory: list[DailyVisitStat]
+    topServices: list[ServiceDemandStat]
+
+
+class ChatLogResponse(BaseModel):
+    id: int
+    sessionId: str
+    visitorId: str | None
+    role: str
+    message: str
+    createdAt: str

@@ -81,7 +81,7 @@ export default function Services() {
       </HeroBanner>
 
       <section className="sticky sticky-below-header z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+        <div className="container-page w-full py-4 space-y-4">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input
@@ -112,7 +112,7 @@ export default function Services() {
       </section>
 
       <section className="py-10 sm:py-14 lg:py-20 pb-24 lg:pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-page w-full">
           {filteredItems.length === 0 ? (
             <div className="text-center py-16 px-4">
               <p className="text-slate-600 mb-4">No services match your search.</p>

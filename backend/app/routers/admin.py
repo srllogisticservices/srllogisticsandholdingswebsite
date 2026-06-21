@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 
+from ..analytics_service import build_analytics_summary
 from ..auth import (
     create_session,
     get_current_admin,
@@ -11,11 +12,13 @@ from ..auth import (
 )
 from ..content import CONTENT_FILES, list_content_files, read_content_file, save_content_file
 from ..auth import seed_admin_user
-from ..database import AdminUser, ContactSubmission, SessionLocal, get_db
+from ..database import AdminUser, ChatMessage, ContactSubmission, SessionLocal, get_db
 from ..schemas import (
     AdminLoginRequest,
     AdminLoginResponse,
     AdminUserResponse,
+    AnalyticsSummaryResponse,
+    ChatLogResponse,
     ContactSubmissionResponse,
     ContentSaveRequest,
 )
@@ -113,6 +116,34 @@ def admin_messages(admin: AdminUser = Depends(get_current_admin), db: Session = 
             phone=row.phone,
             company=row.company,
             service=row.service,
+            message=row.message,
+            createdAt=row.created_at.isoformat() + "Z" if row.created_at else "",
+        )
+        for row in rows
+    ]
+
+
+@router.get("/analytics", response_model=AnalyticsSummaryResponse)
+def admin_analytics(
+    admin: AdminUser = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+    days: int = 30,
+):
+    _ = admin
+    days = max(7, min(days, 90))
+    return AnalyticsSummaryResponse(**build_analytics_summary(db, history_days=days))
+
+
+@router.get("/chat/logs", response_model=list[ChatLogResponse])
+def admin_chat_logs(admin: AdminUser = Depends(get_current_admin), db: Session = Depends(get_db)):
+    _ = admin
+    rows = db.query(ChatMessage).order_by(ChatMessage.created_at.desc()).limit(100).all()
+    return [
+        ChatLogResponse(
+            id=row.id,
+            sessionId=row.session_id,
+            visitorId=row.visitor_id,
+            role=row.role,
             message=row.message,
             createdAt=row.created_at.isoformat() + "Z" if row.created_at else "",
         )

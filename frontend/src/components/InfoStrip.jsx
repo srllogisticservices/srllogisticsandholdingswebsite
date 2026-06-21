@@ -14,7 +14,7 @@ export default function InfoStrip() {
 
   return (
     <div className="hidden sm:block bg-brand-950 text-brand-100 text-xs sm:text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-3">
+      <div className="container-page py-2 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-4 lg:gap-6">
           {links.map(({ icon: Icon, label, href, hideOnMobile }) => (
             <span key={label} className={hideOnMobile ? 'hidden lg:inline-flex items-center gap-1.5' : 'inline-flex items-center gap-1.5'}>

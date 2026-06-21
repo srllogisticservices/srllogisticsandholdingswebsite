@@ -59,7 +59,7 @@ export default function HeroCarousel({
         </>
       )}
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 max-lg:landscape:py-6">
+      <div className="relative z-10 w-full container-page py-10 sm:py-14 lg:py-16 max-lg:landscape:py-6">
         {children}
 
         {hasMultiple && (
